@@ -10,6 +10,8 @@ public interface UserService {
 
     PageResponse<UserDto> getAll(int page, int size, String sortBy, String sortDir);
 
+    void deleteAll();
+
     void delete(Long userId);
 
     UserDto getUser(Long userId);

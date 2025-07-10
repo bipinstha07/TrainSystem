@@ -40,6 +40,13 @@ public class AdminUser {
         return new ResponseEntity<>("Deletion Success",HttpStatus.OK);
     }
 
+    @DeleteMapping("/deleteAll")
+    public ResponseEntity<String> deleteAll(){;
+        userService.deleteAll();
+        return new ResponseEntity<>("Deletion Success",HttpStatus.ACCEPTED);
+    }
+
+
     @GetMapping("/{userId}" )
     public ResponseEntity<UserDto> getUser(@PathVariable Long userId){
        return new ResponseEntity<>(userService.getUser(userId),HttpStatus.OK);
