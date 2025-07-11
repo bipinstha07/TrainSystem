@@ -13,8 +13,6 @@ public class UserPayment {
     private UserPaymentDto userPaymentDto;
 
     public ResponseEntity<UserPaymentDto> payment(){
-        UserPaymentDto userPaymentDto1 = new UserPaymentDto();
-
         return new ResponseEntity<>(userPaymentDto, HttpStatus.CREATED);
 
     }
