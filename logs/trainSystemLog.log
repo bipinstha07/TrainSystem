@@ -1,0 +1,42 @@
+2025-07-12T18:23:52.511-05:00  INFO 6892 --- [restapi] [main] com.restapi.RestapiApplication           : Starting RestapiApplication using Java 23.0.2 with PID 6892 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-12T18:23:52.512-05:00  INFO 6892 --- [restapi] [main] com.restapi.RestapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-07-12T18:23:52.921-05:00  INFO 6892 --- [restapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-12T18:23:52.958-05:00  INFO 6892 --- [restapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 10 JPA repository interfaces.
+2025-07-12T18:23:53.198-05:00  INFO 6892 --- [restapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-07-12T18:23:53.205-05:00  INFO 6892 --- [restapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-12T18:23:53.206-05:00  INFO 6892 --- [restapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-12T18:23:53.227-05:00  INFO 6892 --- [restapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-12T18:23:53.227-05:00  INFO 6892 --- [restapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 690 ms
+2025-07-12T18:23:53.292-05:00  INFO 6892 --- [restapi] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-12T18:23:53.320-05:00  INFO 6892 --- [restapi] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-12T18:23:53.337-05:00  INFO 6892 --- [restapi] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-12T18:23:53.463-05:00  INFO 6892 --- [restapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-12T18:23:53.479-05:00  INFO 6892 --- [restapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-12T18:23:53.761-05:00  INFO 6892 --- [restapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b6136eb
+2025-07-12T18:23:53.762-05:00  INFO 6892 --- [restapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-12T18:23:53.794-05:00  WARN 6892 --- [restapi] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-12T18:23:53.794-05:00  WARN 6892 --- [restapi] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-12T18:23:53.803-05:00  INFO 6892 --- [restapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-12T18:23:54.322-05:00  INFO 6892 --- [restapi] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-12T18:23:54.440-05:00  INFO 6892 --- [restapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12T18:23:54.592-05:00 DEBUG 6892 --- [restapi] [main] c.r.c.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-07-12T18:23:54.647-05:00  INFO 6892 --- [restapi] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-12T18:23:54.925-05:00  INFO 6892 --- [restapi] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-12T18:23:54.975-05:00  WARN 6892 --- [restapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-12T18:23:55.321-05:00  INFO 6892 --- [restapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-07-12T18:23:55.328-05:00  INFO 6892 --- [restapi] [main] com.restapi.RestapiApplication           : Started RestapiApplication in 3.027 seconds (process running for 3.504)
+2025-07-12T18:23:55.330-05:00  INFO 6892 --- [restapi] [main] com.restapi.RestapiApplication           : Logging info
+2025-07-12T18:23:55.330-05:00  WARN 6892 --- [restapi] [main] com.restapi.RestapiApplication           : Loggin warn
+2025-07-12T18:23:55.330-05:00 ERROR 6892 --- [restapi] [main] com.restapi.RestapiApplication           : Logging error
+2025-07-12T18:24:55.222-05:00  INFO 6892 --- [restapi] [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-12T18:24:55.223-05:00  INFO 6892 --- [restapi] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-12T18:24:55.228-05:00  INFO 6892 --- [restapi] [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-07-12T18:24:55.245-05:00 TRACE 6892 --- [restapi] [http-nio-9090-exec-2] c.r.c.security.JwtAuthenticationFilter   : Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMzYxODY3LCJleHAiOjE3NTIzNjIxNjd9.No3GQRF6krnKUpoDKi94mbsBOlyZGhanb3pXJDtnhuDegyXDr0WGP8PPWyqW_V25CXVpY8zL_z2wDYucYL1lCw9
+2025-07-12T18:24:55.300-05:00 ERROR 6892 --- [restapi] [http-nio-9090-exec-2] c.r.c.security.JwtAuthenticationFilter   : Unexpected error during token processing : JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
