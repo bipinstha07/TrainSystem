@@ -1,7 +1,10 @@
 package com.restapi;
 
+import com.restapi.config.security.JwtAuthenticationFilter;
 import com.restapi.entity.Role;
 import com.restapi.repository.RoleRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,15 +15,27 @@ import java.util.UUID;
 @SpringBootApplication
 public class RestapiApplication implements CommandLineRunner {
 
+	private static final Logger logger = LoggerFactory.getLogger(RestapiApplication.class);
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(RestapiApplication.class, args);
 	}
 
+
+
 	@Autowired
 	private RoleRepo roleRepo;
 
+
 	@Override
 	public void run(String... args) throws Exception {
+	logger.info("Logging info");
+	logger.warn("Loggin warn");
+	logger.error("Logging error");
+	logger.trace("Logging trace");
+	logger.debug("Logging debug");
+
 		if(!roleRepo.existsByName("ROLE_ADMIN")){
 			Role role1 = new Role();
 			role1.setId(UUID.randomUUID().toString());

@@ -14,12 +14,9 @@ public class UserPayment {
 
     private UserPaymentDto userPaymentDto;
 
-    private  PaymentService paymentService;
-
     @PostMapping("/payment")
     public ResponseEntity<UserPaymentDto> payment(@RequestBody UserPaymentDto userPaymentDto){
-        UserPaymentDto savedPayment = paymentService.savePayment(userPaymentDto);
-        return new ResponseEntity<>(savedPayment, HttpStatus.CREATED);
+        return new ResponseEntity<>(userPaymentDto, HttpStatus.CREATED);
 
     }
 
