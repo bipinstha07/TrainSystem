@@ -22,7 +22,7 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    public static final Logger loggerSecurity = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
+    private static final Logger loggerSecurity = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
     private JwtHelper jwtHelper;
     private UserDetailsService userDetailsService;
 
@@ -38,7 +38,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // Get the Authorization header from the request
         String authorizationHeader = request.getHeader("Authorization");
 
-        loggerSecurity.trace("REquest to the JWT Filter: {}", authorizationHeader);
+        loggerSecurity.trace("Request to the JWT Filter: {}", authorizationHeader);
 
         String username = null;
         String token = null;
@@ -51,6 +51,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 // Extract username from the token
                 username = jwtHelper.getUserNameFromToken(token);
 
+                loggerSecurity.trace("User name: {}",username);
                 // If username is extracted and no authentication is currently set in SecurityContext
                 if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                     // Load UserDetails from the username
@@ -67,25 +68,31 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                         // Set the authentication object in the SecurityContext
                         SecurityContextHolder.getContext().setAuthentication(authentication);
+                        loggerSecurity.trace("Authentication Security reached here");
                     }
                 }
             } catch (IllegalArgumentException ex) {
-                System.err.println("Unable to get JWT Token: " + ex.getMessage());
+                loggerSecurity.error("Illegal Argument : {}" , ex.getMessage());
                 // ex.printStackTrace(); // Avoid printing full stack trace in production logs unless necessary
             } catch (ExpiredJwtException ex) {
-                System.err.println("JWT Token has expired: " + ex.getMessage());
+                loggerSecurity.error("JWT Token expired : {}", ex.getMessage());
+//                System.err.println("JWT Token has expired: " + ex.getMessage());
                 // ex.printStackTrace();
             } catch (MalformedJwtException ex) {
-                System.err.println("Invalid JWT Token: " + ex.getMessage());
+
+                loggerSecurity.error("Invalid JWT Token : {}", ex.getMessage());
+//                System.err.println("Invalid JWT Token: " + ex.getMessage());
                 // ex.printStackTrace();
             } catch (Exception e) {
-                System.err.println("An unexpected error occurred during token processing: " + e.getMessage());
+                loggerSecurity.error("Unexpected error during token processing : {}", e.getMessage());
+//                System.err.println("An unexpected error occurred during token processing: " + e.getMessage());
                 // e.printStackTrace();
             }
         } else {
             // This message is expected for public endpoints like /auth/login
             // and for any request without a proper Authorization header.
-            System.out.println("Invalid or missing Authorization Header for request to: " + request.getRequestURI());
+            loggerSecurity.error("Invalid or Missing Authorizatio Header for request to : {}", request.getRequestURI());
+//            System.out.println("Invalid or missing Authorization Header for request to: " + request.getRequestURI());
         }
 
         // Continue the filter chain
