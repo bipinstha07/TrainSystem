@@ -1,5 +1,6 @@
 package com.restapi.controller.admin;
 
+import com.restapi.aspectOriented.CustomAopAnnotation;
 import com.restapi.dto.PageResponse;
 import com.restapi.dto.TrainDto;
 import com.restapi.service.TrainService;
@@ -34,6 +35,9 @@ public class AdminTrain {
             summary = "Get All Train",
             description = "This Api fetch all the train "
     )
+
+//    Custom AOP annotation
+    @CustomAopAnnotation
     @GetMapping
     public ResponseEntity<PageResponse<TrainDto>> getAll(
             @RequestParam (value = "page" , defaultValue = "0") int page,
