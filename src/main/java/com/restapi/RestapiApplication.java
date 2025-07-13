@@ -31,7 +31,7 @@ public class RestapiApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 	logger.info("Logging info");
-	logger.warn("Loggin warn");
+	logger.warn("Logging warn");
 	logger.error("Logging error");
 	logger.trace("Logging trace");
 	logger.debug("Logging debug");
