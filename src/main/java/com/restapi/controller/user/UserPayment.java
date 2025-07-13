@@ -1,4 +1,4 @@
-package com.restapi.controller;
+package com.restapi.controller.user;
 
 import com.restapi.dto.UserPaymentDto;
 import lombok.AllArgsConstructor;

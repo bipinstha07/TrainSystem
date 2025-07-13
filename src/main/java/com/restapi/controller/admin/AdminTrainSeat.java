@@ -1,4 +1,4 @@
-package com.restapi.controller;
+package com.restapi.controller.admin;
 
 import com.restapi.dto.TrainSeatDto;
 import com.restapi.service.TrainSeatService;

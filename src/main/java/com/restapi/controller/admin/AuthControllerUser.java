@@ -1,4 +1,4 @@
-package com.restapi.controller;
+package com.restapi.controller.admin;
 
 import com.restapi.config.security.JwtHelper;
 import com.restapi.dto.ErrorResponse;
