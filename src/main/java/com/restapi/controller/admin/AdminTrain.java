@@ -37,7 +37,7 @@ public class AdminTrain {
     )
 
 //    Custom AOP annotation
-    @CustomAopAnnotation
+//    @CustomAopAnnotation
     @GetMapping
     public ResponseEntity<PageResponse<TrainDto>> getAll(
             @RequestParam (value = "page" , defaultValue = "0") int page,

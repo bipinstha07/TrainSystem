@@ -705,3 +705,8 @@
 2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ After method execution: getAll
 2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Time Taken: 54ms
 2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.CustomAspect ------ Custom AOP annotation :getAll
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:59:48 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
