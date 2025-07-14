@@ -2,6 +2,7 @@ package com.restapi.aspectOriented;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -18,9 +19,20 @@ public class CustomPayment {
         logger.info("Before Payment Executing");
     }
 
-    @AfterReturning("@annotation(com.restapi.aspectOriented.CustomPaymentAnnotation)")
-    public void afterReturning(JoinPoint joinPoint){
-        logger.info("Payment Success :"+ joinPoint.getSignature().getName());
+    @AfterReturning(pointcut = "@annotation(com.restapi.aspectOriented.CustomPaymentAnnotation)",
+    returning = "result")
+    public void afterReturning(JoinPoint joinPoint, Object result){
+        logger.info("Payment Success :"+ joinPoint.getSignature().getName() + result);
     }
+
+    @AfterThrowing(
+            pointcut = "@annotation(com.restapi.aspectOriented.CustomPaymentAnnotation)",
+            throwing = "ex"
+    )
+    public void afterThrowing(JoinPoint joinPoint, Throwable ex) {
+        logger.error("Payment Failed: " + joinPoint.getSignature().getName());
+        logger.error("Exception: " + ex.getMessage());
+    }
+
 
 }
