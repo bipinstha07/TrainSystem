@@ -1,5 +1,6 @@
 package com.restapi.service;
 
+import com.restapi.aspectOriented.CustomPaymentAnnotation;
 import com.restapi.dto.UserPaymentDto;
 import com.restapi.entity.Payment;
 import com.restapi.repository.PaymentRepo;
@@ -14,6 +15,7 @@ public class PaymentServiceImp implements PaymentService{
     private PaymentRepo paymentRepo;
     private ModelMapper modelMapper;
 
+    @CustomPaymentAnnotation
     public UserPaymentDto add(UserPaymentDto userPaymentDto){
         Payment payment =  modelMapper.map(userPaymentDto,Payment.class);
         Payment savedPayment = paymentRepo.save(payment);
