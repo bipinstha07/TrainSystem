@@ -1,6 +1,9 @@
 package com.restapi.service;
 
 import com.restapi.dto.BookingDto;
+import com.restapi.dto.StationDto;
+import com.restapi.dto.TrainScheduleDto;
+import com.restapi.dto.UserDto;
 import com.restapi.entity.Booking;
 import com.restapi.entity.Station;
 import com.restapi.entity.TrainSchedule;
@@ -28,7 +31,7 @@ public class BookingServiceImp implements BookingService{
     public BookingDto save(BookingDto bookingDto){
        Station sourceStation = stationRepo.findById(bookingDto.getSourceStationId()).orElseThrow(()->new ResourceNotFoundException("No Source Station Found"));
         Station destinationStation = stationRepo.findById(bookingDto.getDestinationStationId()).orElseThrow(()->new ResourceNotFoundException("No Destination Station Found"));
-        User user = userRepo.findById(bookingDto.getUserId()).orElseThrow(()->new ResourceNotFoundException("No user Found"));
+        User user = userRepo.findById(bookingDto.getUser().getId()).orElseThrow(()->new ResourceNotFoundException("No user Found"));
         TrainSchedule trainSchedule = trainScheduleRepo.findById(bookingDto.getTrainScheduleId()).orElseThrow(()->new ResourceNotFoundException("No Train Schedule"));
         bookingDto.setCreatedAt(LocalDateTime.now());
         Booking booking = modelMapper.map(bookingDto,Booking.class);
@@ -36,7 +39,10 @@ public class BookingServiceImp implements BookingService{
         booking.setDestinationStation(destinationStation);
         booking.setUser(user);
         booking.setTrainSchedule(trainSchedule);
-        return modelMapper.map(bookingRepo.save(booking),BookingDto.class);
+        BookingDto savedBookingDto = modelMapper.map(bookingRepo.save(booking),BookingDto.class);
+        savedBookingDto.setUser(modelMapper.map(user, UserDto.class));
+
+        return savedBookingDto;
 
     }
 

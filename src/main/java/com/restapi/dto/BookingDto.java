@@ -19,18 +19,12 @@ public class BookingDto {
 
 
         private Long id;
-        private long userId;
+//        private long userId;
         private long trainScheduleId;
         private Long sourceStationId;
         private long destinationStationId;
 
-//    private UserDto userId;
-//    private TrainScheduleDto trainScheduleId;
-//    private StationDto sourceStationId;
-//    private StationDto destinationStationId;
-    private List<BookingPassengerDto> passengers;
-    private PaymentDto payment;
-
+    private UserDto user;
 
     private String pnr;
         private LocalDate journeyDate;
