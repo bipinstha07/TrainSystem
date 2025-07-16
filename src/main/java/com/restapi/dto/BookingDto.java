@@ -23,9 +23,9 @@ public class BookingDto {
         private Long trainScheduleId;
         private Long sourceStationId;
         private Long destinationStationId;
-        private Long userId;
+//        private Long userId;
 
-//    private UserDto user;
+    private UserDto user;
 
     private String pnr;
         private LocalDate journeyDate;
