@@ -1,6 +1,6 @@
 package com.restapi.controller.user;
 
-import com.restapi.dto.UserPaymentDto;
+import com.restapi.dto.PaymentDto;
 import com.restapi.service.PaymentServiceImp;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @AllArgsConstructor
 public class UserPayment {
 
-    private UserPaymentDto userPaymentDto;
+    private PaymentDto paymentDto;
     private PaymentServiceImp paymentServiceImp;
 
     @PostMapping("/payment")
-    public ResponseEntity<UserPaymentDto> payment(@RequestBody UserPaymentDto userPaymentDto){
-      UserPaymentDto savedUserPaymentDto =  paymentServiceImp.add(userPaymentDto);
-        return new ResponseEntity<>(savedUserPaymentDto, HttpStatus.CREATED);
+    public ResponseEntity<PaymentDto> payment(@RequestBody PaymentDto paymentDto){
+      PaymentDto savedPaymentDto =  paymentServiceImp.add(paymentDto);
+        return new ResponseEntity<>(savedPaymentDto, HttpStatus.CREATED);
 
     }
 

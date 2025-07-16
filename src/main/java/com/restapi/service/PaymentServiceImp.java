@@ -1,7 +1,7 @@
 package com.restapi.service;
 
 import com.restapi.aspectOriented.CustomPaymentAnnotation;
-import com.restapi.dto.UserPaymentDto;
+import com.restapi.dto.PaymentDto;
 import com.restapi.entity.Payment;
 import com.restapi.repository.PaymentRepo;
 import lombok.AllArgsConstructor;
@@ -16,10 +16,10 @@ public class PaymentServiceImp implements PaymentService{
     private ModelMapper modelMapper;
 
     @CustomPaymentAnnotation
-    public UserPaymentDto add(UserPaymentDto userPaymentDto){
-        Payment payment =  modelMapper.map(userPaymentDto,Payment.class);
+    public PaymentDto add(PaymentDto paymentDto){
+        Payment payment =  modelMapper.map(paymentDto,Payment.class);
         Payment savedPayment = paymentRepo.save(payment);
-        return modelMapper.map(savedPayment,UserPaymentDto.class);
+        return modelMapper.map(savedPayment, PaymentDto.class);
     }
 
 }
