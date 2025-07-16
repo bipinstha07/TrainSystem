@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class BookingDto {
 
-        private Long id;
+        private long id;
         private long userId;
         private long trainScheduleId;
         private Long sourceStationId;

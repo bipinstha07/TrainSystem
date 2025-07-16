@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 public class UserPaymentDto {
     private Long id;
-    private Booking booking;
+    private Long booking;
     private BigDecimal amount;
     private PaymentStatus payemtnStatus;
     private String paymentMethod;
