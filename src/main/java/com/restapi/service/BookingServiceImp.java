@@ -1,8 +1,6 @@
 package com.restapi.service;
 
 import com.restapi.dto.BookingDto;
-import com.restapi.dto.StationDto;
-import com.restapi.dto.TrainScheduleDto;
 import com.restapi.dto.UserDto;
 import com.restapi.entity.Booking;
 import com.restapi.entity.Station;
@@ -45,5 +43,13 @@ public class BookingServiceImp implements BookingService{
         return savedBookingDto;
 
     }
+
+    @Override
+    public void delete(long bookingId){
+        Booking booking= bookingRepo.findById(bookingId).orElseThrow(()->new ResourceNotFoundException("No Booking Available"));
+        bookingRepo.delete(booking);
+
+    }
+
 
 }

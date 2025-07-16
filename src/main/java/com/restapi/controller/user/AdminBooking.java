@@ -1,4 +1,4 @@
-package com.restapi.controller.admin;
+package com.restapi.controller.user;
 
 import com.restapi.dto.BookingDto;
 import com.restapi.service.BookingServiceImp;
@@ -8,14 +8,11 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/admin/booking")
+@RequestMapping("/user/booking")
 @AllArgsConstructor
 public class AdminBooking {
     private BookingServiceImp bookingServiceImp;
@@ -35,5 +32,13 @@ public class AdminBooking {
       return new ResponseEntity<>(bookingServiceImp.save(bookingDto), HttpStatus.CREATED);
 
     }
+
+
+    @DeleteMapping("/{bookingId}")
+    public ResponseEntity<String> delete(@PathVariable long  bookingId){
+        bookingServiceImp.delete(bookingId);
+        return new ResponseEntity<>("Deletion Success",HttpStatus.OK);
+    }
+
 
 }
