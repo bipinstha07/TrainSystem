@@ -34,6 +34,16 @@ public class AdminBooking {
     }
 
 
+    @Operation(
+            summary = "Delete Booking",
+            description = "This API delete booking by bookingId"
+    )
+    @ApiResponses(
+            value = {
+                    @ApiResponse(responseCode = "200", description = "Success"),
+                    @ApiResponse(responseCode = "500", description = "Internal Servre Error")
+            }
+    )
     @DeleteMapping("/{bookingId}")
     public ResponseEntity<String> delete(@PathVariable long  bookingId){
         bookingServiceImp.delete(bookingId);
