@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Book;
+
 
 @RestController
 @RequestMapping("/user/booking")
@@ -32,6 +34,22 @@ public class AdminBooking {
       return new ResponseEntity<>(bookingServiceImp.save(bookingDto), HttpStatus.CREATED);
 
     }
+
+
+    @Operation(
+            summary = "Get Booking by Bookin Id",
+            description = "This API get the details of Booking by booking Id"
+    )
+    @ApiResponses( value={
+            @ApiResponse(responseCode = "200",description = "Success"),
+            @ApiResponse(responseCode = "500",description = "Internal Server Error")
+    }
+    )
+    @GetMapping("/{bookingId}")
+    public ResponseEntity<BookingDto> getbyId(@PathVariable long bookingId){
+        return new ResponseEntity<>(bookingServiceImp.getBooking(bookingId),HttpStatus.OK);
+    }
+
 
 
     @Operation(

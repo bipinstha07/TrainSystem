@@ -5,5 +5,7 @@ import com.restapi.dto.BookingDto;
 public interface BookingService {
     BookingDto save(BookingDto bookingDto);
 
+    BookingDto getBooking(long bookingId);
+
     void delete(long bookingId);
 }

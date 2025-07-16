@@ -20,11 +20,12 @@ public class BookingDto {
 
         private Long id;
 //        private long userId;
-        private long trainScheduleId;
+        private Long trainScheduleId;
         private Long sourceStationId;
-        private long destinationStationId;
+        private Long destinationStationId;
+        private Long userId;
 
-    private UserDto user;
+//    private UserDto user;
 
     private String pnr;
         private LocalDate journeyDate;

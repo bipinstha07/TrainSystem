@@ -29,7 +29,7 @@ public class BookingServiceImp implements BookingService{
     public BookingDto save(BookingDto bookingDto){
        Station sourceStation = stationRepo.findById(bookingDto.getSourceStationId()).orElseThrow(()->new ResourceNotFoundException("No Source Station Found"));
         Station destinationStation = stationRepo.findById(bookingDto.getDestinationStationId()).orElseThrow(()->new ResourceNotFoundException("No Destination Station Found"));
-        User user = userRepo.findById(bookingDto.getUser().getId()).orElseThrow(()->new ResourceNotFoundException("No user Found"));
+        User user = userRepo.findById(bookingDto.getUserId()).orElseThrow(()->new ResourceNotFoundException("No user Found"));
         TrainSchedule trainSchedule = trainScheduleRepo.findById(bookingDto.getTrainScheduleId()).orElseThrow(()->new ResourceNotFoundException("No Train Schedule"));
         bookingDto.setCreatedAt(LocalDateTime.now());
         Booking booking = modelMapper.map(bookingDto,Booking.class);
@@ -38,11 +38,19 @@ public class BookingServiceImp implements BookingService{
         booking.setUser(user);
         booking.setTrainSchedule(trainSchedule);
         BookingDto savedBookingDto = modelMapper.map(bookingRepo.save(booking),BookingDto.class);
-        savedBookingDto.setUser(modelMapper.map(user, UserDto.class));
+//        savedBookingDto.setUser(modelMapper.map(user, UserDto.class));
 
         return savedBookingDto;
 
     }
+
+
+    @Override
+    public BookingDto getBooking(long bookingId){
+       Booking booking= bookingRepo.findById(bookingId).orElseThrow(()-> new ResourceNotFoundException("No Booking Found"));
+        return modelMapper.map(booking,BookingDto.class);
+    }
+
 
     @Override
     public void delete(long bookingId){
