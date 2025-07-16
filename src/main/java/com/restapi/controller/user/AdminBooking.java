@@ -69,4 +69,10 @@ public class AdminBooking {
     }
 
 
+    @PostMapping("/{pnrNumber}")
+    public ResponseEntity<BookingDto> getByPrn(@PathVariable String pnrNumber){
+        return new ResponseEntity<>(bookingServiceImp.findByPnr(pnrNumber),HttpStatus.OK);
+    }
+
+
 }

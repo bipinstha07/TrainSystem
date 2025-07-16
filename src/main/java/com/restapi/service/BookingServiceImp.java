@@ -44,6 +44,16 @@ public class BookingServiceImp implements BookingService{
 
     }
 
+    @Override
+    public BookingDto findByPnr(String pnr) {
+        Booking booking = bookingRepo.findBookingByPnr(pnr);
+        if (booking == null) {
+            throw new ResourceNotFoundException("No PNR Found: " + pnr);
+        }
+        return modelMapper.map(booking, BookingDto.class);
+    }
+
+
 
     @Override
     public BookingDto getBooking(long bookingId){
