@@ -1,0 +1,712 @@
+2025-07-13 15:46:52 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:46:52 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 9102 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:46:52 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:46:53 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:46:53 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 28 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:46:53 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:46:53 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:46:53 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:46:53 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:46:53 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:46:53 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 785 ms
+2025-07-13 15:46:53 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:46:53 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:46:53 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:46:53 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:46:53 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:46:54 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@622ba721
+2025-07-13 15:46:54 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:46:54 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:46:54 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:46:54 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:46:54 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:46:54 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:46:55 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:46:55 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:46:55 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:46:55 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:46:55 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:46:55 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:46:55 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.251 seconds (process running for 3.67)
+2025-07-13 15:46:55 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:46:55 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:46:55 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:47:18 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:47:18 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:47:18 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 4 ms
+2025-07-13 15:47:18 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 15:47:18 [ERROR] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 394404959 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T20:47:18.959Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 15:47:50 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 15:47:50 [ERROR] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 394436440 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T20:47:50.440Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 15:47:55 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5NjM5LCJleHAiOjE3NTI0Mzk5Mzl9.zkLz-j0KUK9AMPpy0_EAJYim0J6dlBejUyWBBB5Yi_vkwQkPjlTdga9HvuxNlhuHOjZIvqrbUOzpr0WPcHTjvw
+2025-07-13 15:47:55 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:47:55 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:49:32 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 15:49:32 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 15:49:32 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:49:32 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 15:49:32 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 15:50:05 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:50:05 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 11113 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:50:05 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:50:05 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:50:05 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 27 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:50:05 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:50:06 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:50:06 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:50:06 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:50:06 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:50:06 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 725 ms
+2025-07-13 15:50:06 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:50:06 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:50:06 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:50:06 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:50:06 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:50:06 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54caeadc
+2025-07-13 15:50:06 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:50:06 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:50:06 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:50:06 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:50:07 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:50:07 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:50:07 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:50:07 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:50:07 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:50:07 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:50:08 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:50:08 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:50:08 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.027 seconds (process running for 3.374)
+2025-07-13 15:50:08 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:50:08 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:50:08 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:50:15 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:50:15 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:50:15 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 3 ms
+2025-07-13 15:50:15 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 15:50:15 [ERROR] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 394581965 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T20:50:15.965Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 15:50:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:50:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:50:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:50:30 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion
+2025-07-13 15:50:58 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 15:50:58 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 15:50:58 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:50:58 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 15:50:58 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 15:51:00 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:51:00 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 11750 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:51:00 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:51:01 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:51:01 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 26 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:51:01 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:51:01 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:51:01 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:51:01 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:51:01 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:51:01 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 713 ms
+2025-07-13 15:51:01 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:51:01 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:51:01 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:51:01 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:51:01 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:51:01 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cc74fc4
+2025-07-13 15:51:01 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:51:01 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:51:01 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:51:01 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:51:02 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:51:02 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:51:02 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:51:02 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:51:03 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:51:03 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:51:03 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:51:03 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:51:03 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.04 seconds (process running for 3.434)
+2025-07-13 15:51:03 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:51:03 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:51:03 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:51:03 [INFO] [http-nio-9090-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:51:03 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:51:03 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 1 ms
+2025-07-13 15:51:04 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:51:04 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:51:04 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:51:04 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion
+2025-07-13 15:51:50 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 15:51:50 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 15:51:50 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:51:50 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 15:51:50 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 15:51:52 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:51:52 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 12287 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:51:52 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:51:52 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:51:52 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 26 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:51:53 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:51:53 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:51:53 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:51:53 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:51:53 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:51:53 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 686 ms
+2025-07-13 15:51:53 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:51:53 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:51:53 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:51:53 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:51:53 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:51:53 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@338270ea
+2025-07-13 15:51:53 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:51:53 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:51:53 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:51:53 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:51:54 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:51:54 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:51:54 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:51:54 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:51:54 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:51:54 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:51:54 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:51:54 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:51:54 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 2.832 seconds (process running for 3.195)
+2025-07-13 15:51:54 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:51:54 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:51:54 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:51:59 [INFO] [http-nio-9090-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:51:59 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:51:59 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 7 ms
+2025-07-13 15:51:59 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:51:59 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:51:59 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:51:59 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :ResponseEntity com.restapi.controller.admin.AdminTrain.getAll(int,int,String,String)
+2025-07-13 15:52:27 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 15:52:27 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 15:52:27 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:52:27 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 15:52:27 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 15:52:29 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:52:29 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 12616 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:52:29 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:52:29 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:52:29 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 26 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:52:30 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:52:30 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:52:30 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:52:30 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:52:30 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:52:30 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 665 ms
+2025-07-13 15:52:30 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:52:30 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:52:30 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:52:30 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:52:30 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:52:30 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dd247b
+2025-07-13 15:52:30 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:52:30 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:52:30 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:52:30 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:52:31 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:52:31 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:52:31 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:52:31 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:52:31 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:52:31 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:52:32 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:52:32 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:52:32 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 2.807 seconds (process running for 3.149)
+2025-07-13 15:52:32 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:52:32 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:52:32 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:52:35 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:52:35 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:52:35 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 2 ms
+2025-07-13 15:52:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:52:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:52:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:52:35 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 15:52:52 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 15:52:52 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 15:52:52 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:52:52 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 15:52:52 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 15:52:54 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 15:52:54 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 12940 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 15:52:54 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 15:52:55 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 15:52:55 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 27 ms. Found 10 JPA repository interfaces.
+2025-07-13 15:52:55 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 15:52:55 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:52:55 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 15:52:55 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 15:52:55 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 15:52:55 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 762 ms
+2025-07-13 15:52:55 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 15:52:55 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 15:52:55 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 15:52:55 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 15:52:55 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 15:52:55 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21ffc00e
+2025-07-13 15:52:55 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 15:52:55 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 15:52:55 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 15:52:55 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 15:52:56 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 15:52:56 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 15:52:56 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 15:52:56 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 15:52:57 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 15:52:57 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 15:52:57 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 15:52:57 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 15:52:57 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.055 seconds (process running for 3.4)
+2025-07-13 15:52:57 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 15:52:57 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 15:52:57 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 15:53:19 [INFO] [http-nio-9090-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 15:53:19 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 15:53:19 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 3 ms
+2025-07-13 15:53:19 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:53:20 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:53:20 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:53:20 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 15:53:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 15:53:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 15:53:30 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 15:53:30 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:10:23 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:10:23 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:10:23 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:10:23 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:10:23 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:10:25 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:10:25 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 23344 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:10:25 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:10:26 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:10:26 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 29 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:10:26 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:10:26 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:10:26 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:10:26 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:10:26 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:10:26 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 747 ms
+2025-07-13 16:10:26 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:10:26 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:10:26 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:10:26 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:10:26 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:10:26 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@582c1f8d
+2025-07-13 16:10:26 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:10:27 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:10:27 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:10:27 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:10:27 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:10:27 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:10:27 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:10:27 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:10:28 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:10:28 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:10:28 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:10:28 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:10:28 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.247 seconds (process running for 3.625)
+2025-07-13 16:10:28 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:10:28 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:10:28 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:10:34 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 16:10:34 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 16:10:34 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 4 ms
+2025-07-13 16:10:34 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 16:10:34 [ERROR] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 918164 milliseconds ago at 2025-07-13T20:55:16.000Z. Current time: 2025-07-13T21:10:34.164Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 16:10:47 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 16:10:47 [ERROR] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 395813194 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T21:10:47.194Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 16:10:47 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :login
+2025-07-13 16:10:47 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ After method Execution :login
+2025-07-13 16:11:00 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:11:00 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:11:00 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:11:00 [INFO] [http-nio-9090-exec-4]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:11:00 [INFO] [http-nio-9090-exec-4]  c.r.aspectOriented.LoggingAspect ------ After method Execution :getAll
+2025-07-13 16:13:06 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:13:06 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:13:06 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:13:06 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:13:06 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:13:08 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:13:08 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 25096 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:13:08 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:13:08 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:13:08 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 29 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:13:09 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:13:09 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:13:09 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:13:09 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:13:09 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:13:09 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 774 ms
+2025-07-13 16:13:09 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:13:09 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:13:09 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:13:09 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:13:09 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:13:09 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@134955bb
+2025-07-13 16:13:09 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:13:09 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:13:09 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:13:09 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:13:10 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:13:10 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:13:10 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:13:10 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:13:10 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:13:11 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:13:11 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:13:11 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:13:11 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.164 seconds (process running for 3.501)
+2025-07-13 16:13:11 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:13:11 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:13:11 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 3 ms
+2025-07-13 16:13:15 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:13:15 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:13:15 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ After method Execution :getAll
+2025-07-13 16:13:15 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 40
+2025-07-13 16:13:26 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:13:26 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:13:26 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:13:26 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:13:26 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:13:28 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:13:28 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 25327 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:13:28 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:13:28 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:13:28 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 27 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:13:28 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:13:29 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:13:29 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:13:29 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:13:29 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:13:29 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 787 ms
+2025-07-13 16:13:29 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:13:29 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:13:29 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:13:29 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:13:29 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:13:29 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c56c911
+2025-07-13 16:13:29 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:13:29 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:13:29 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:13:29 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:13:30 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:13:30 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:13:30 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:13:30 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:13:30 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:13:30 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:13:31 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:13:31 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:13:31 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.089 seconds (process running for 3.383)
+2025-07-13 16:13:31 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:13:31 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:13:31 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 9 ms
+2025-07-13 16:13:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:13:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:13:35 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ After method Execution :getAll
+2025-07-13 16:13:35 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 37ms
+2025-07-13 16:13:40 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:13:40 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:13:40 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:13:40 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:13:40 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ After method Execution :getAll
+2025-07-13 16:13:40 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 13ms
+2025-07-13 16:13:44 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:13:44 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:13:44 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:13:44 [INFO] [http-nio-9090-exec-4]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :getAll
+2025-07-13 16:13:44 [INFO] [http-nio-9090-exec-4]  c.r.aspectOriented.LoggingAspect ------ After method Execution :getAll
+2025-07-13 16:13:44 [INFO] [http-nio-9090-exec-4]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 18ms
+2025-07-13 16:13:53 [TRACE] [http-nio-9090-exec-5]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDM5ODE2LCJleHAiOjE3NTI0NDAxMTZ9.GbUQv-17GIdv7NYNQJjiPavTQ3YDiHCwkk_pAlWmFm4SYHrA6ooY6IKID76iLGwAapTjTWg60ur8mp3LgTo5Lw
+2025-07-13 16:13:53 [ERROR] [http-nio-9090-exec-5]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 1117100 milliseconds ago at 2025-07-13T20:55:16.000Z. Current time: 2025-07-13T21:13:53.100Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 16:13:57 [TRACE] [http-nio-9090-exec-6]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:13:57 [TRACE] [http-nio-9090-exec-6]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:13:57 [TRACE] [http-nio-9090-exec-6]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:13:57 [INFO] [http-nio-9090-exec-6]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:13:57 [INFO] [http-nio-9090-exec-6]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:13:57 [INFO] [http-nio-9090-exec-6]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 22ms
+2025-07-13 16:14:02 [TRACE] [http-nio-9090-exec-7]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:02 [TRACE] [http-nio-9090-exec-7]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:02 [TRACE] [http-nio-9090-exec-7]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:02 [INFO] [http-nio-9090-exec-7]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:02 [INFO] [http-nio-9090-exec-7]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:02 [INFO] [http-nio-9090-exec-7]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 6ms
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-8]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-8]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-8]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-8]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-8]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-8]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 9ms
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-9]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-9]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:03 [TRACE] [http-nio-9090-exec-9]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-9]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-9]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:03 [INFO] [http-nio-9090-exec-9]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 10ms
+2025-07-13 16:14:04 [TRACE] [http-nio-9090-exec-10]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:04 [TRACE] [http-nio-9090-exec-10]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:04 [TRACE] [http-nio-9090-exec-10]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:04 [INFO] [http-nio-9090-exec-10]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:04 [INFO] [http-nio-9090-exec-10]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:04 [INFO] [http-nio-9090-exec-10]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 11ms
+2025-07-13 16:14:05 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:05 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:05 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:05 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:05 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:05 [INFO] [http-nio-9090-exec-1]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 15ms
+2025-07-13 16:14:06 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:06 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:06 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:06 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:06 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:06 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 14ms
+2025-07-13 16:14:07 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQxMDQ3LCJleHAiOjE3NTI0NDEzNDd9.kblFX-7r4OABbHdch9fhpPd50N0VtLyjGNZc6WWOjcNNOEBsv-LFlTTMCmtHoDZUnJs5d2xFiT0pOrayhxYNxw
+2025-07-13 16:14:07 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:14:07 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:14:07 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method exectuion :listUser
+2025-07-13 16:14:07 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ After method Execution :listUser
+2025-07-13 16:14:07 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Time Taken : 10ms
+2025-07-13 16:17:57 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:17:57 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:17:57 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:17:57 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:17:57 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:17:59 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:17:59 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 28208 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:17:59 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:18:00 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:18:00 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 27 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:18:00 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:18:00 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:18:00 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:18:00 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:18:00 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:18:00 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 771 ms
+2025-07-13 16:18:00 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:18:00 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:18:00 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:18:00 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:18:00 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:18:01 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20171cdc
+2025-07-13 16:18:01 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:18:01 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:18:01 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:18:01 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:18:01 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:18:01 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:18:01 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:18:01 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:18:02 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:18:02 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:18:02 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:18:02 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:18:02 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.224 seconds (process running for 3.585)
+2025-07-13 16:18:02 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:18:02 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:18:02 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:45:32 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:45:32 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:45:32 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:45:32 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:45:32 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:45:35 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:45:35 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 44934 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:45:35 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:45:35 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:45:35 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 28 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:45:35 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:45:35 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:45:35 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:45:35 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:45:35 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:45:35 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 791 ms
+2025-07-13 16:45:35 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:45:35 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:45:36 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:45:36 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:45:36 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:45:36 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70cd122
+2025-07-13 16:45:36 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:45:36 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:45:36 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:45:36 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:45:36 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:45:37 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:45:37 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:45:37 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:45:37 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:45:37 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:45:37 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:45:37 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:45:37 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.09 seconds (process running for 3.497)
+2025-07-13 16:45:37 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:45:37 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:45:37 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:45:44 [INFO] [http-nio-9090-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 16:45:44 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 16:45:44 [INFO] [http-nio-9090-exec-1]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 7 ms
+2025-07-13 16:45:44 [TRACE] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 16:45:44 [ERROR] [http-nio-9090-exec-1]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 397910712 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T21:45:44.712Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 16:46:02 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQzMTQ1LCJleHAiOjE3NTI0NDM0NDV9.XtJ83nhC8KUkweg-k3xZhI28lfyjypN9zU-z5ApWric42yLO89rvarR4tQTHijtCZf2bWzlfh1fCdyF9MMo6OA
+2025-07-13 16:46:02 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:46:02 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:46:02 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.CustomAspect ------ Custom AOP annotation :getAll
+2025-07-13 16:46:13 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQzMTQ1LCJleHAiOjE3NTI0NDM0NDV9.XtJ83nhC8KUkweg-k3xZhI28lfyjypN9zU-z5ApWric42yLO89rvarR4tQTHijtCZf2bWzlfh1fCdyF9MMo6OA
+2025-07-13 16:46:13 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:46:13 [TRACE] [http-nio-9090-exec-4]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:56:20 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:56:20 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:56:20 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:56:20 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:56:20 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
+2025-07-13 16:56:22 [INFO] [background-preinit]  o.h.validator.internal.util.Version ------ HV000001: Hibernate Validator 8.0.2.Final
+2025-07-13 16:56:22 [INFO] [main]  com.restapi.RestapiApplication ------ Starting RestapiApplication using Java 23.0.2 with PID 51388 (/Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi/target/classes started by bipin in /Users/bipin/Desktop/Data/Status/Backend Spring Boot/restapi)
+2025-07-13 16:56:22 [INFO] [main]  com.restapi.RestapiApplication ------ No active profile set, falling back to 1 default profile: "default"
+2025-07-13 16:56:23 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-13 16:56:23 [INFO] [main]  o.s.d.r.c.RepositoryConfigurationDelegate ------ Finished Spring Data repository scanning in 39 ms. Found 10 JPA repository interfaces.
+2025-07-13 16:56:23 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat initialized with port 9090 (http)
+2025-07-13 16:56:23 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Initializing ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:56:23 [INFO] [main]  o.a.catalina.core.StandardService ------ Starting service [Tomcat]
+2025-07-13 16:56:23 [INFO] [main]  o.a.catalina.core.StandardEngine ------ Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-13 16:56:23 [INFO] [main]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring embedded WebApplicationContext
+2025-07-13 16:56:23 [INFO] [main]  o.s.b.w.s.c.ServletWebServerApplicationContext ------ Root WebApplicationContext: initialization completed in 937 ms
+2025-07-13 16:56:23 [INFO] [main]  o.h.jpa.internal.util.LogHelper ------ HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-13 16:56:23 [INFO] [main]  org.hibernate.Version ------ HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-13 16:56:23 [INFO] [main]  o.h.c.i.RegionFactoryInitiator ------ HHH000026: Second-level cache disabled
+2025-07-13 16:56:23 [INFO] [main]  o.s.o.j.p.SpringPersistenceUnitInfo ------ No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-13 16:56:23 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Starting...
+2025-07-13 16:56:24 [INFO] [main]  com.zaxxer.hikari.pool.HikariPool ------ HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69d902f9
+2025-07-13 16:56:24 [INFO] [main]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Start completed.
+2025-07-13 16:56:24 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-13 16:56:24 [WARN] [main]  org.hibernate.orm.deprecation ------ HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-13 16:56:24 [INFO] [main]  o.hibernate.orm.connections.pooling ------ HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-13 16:56:24 [INFO] [main]  o.h.e.t.j.p.i.JtaPlatformInitiator ------ HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-13 16:56:24 [INFO] [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:56:25 [DEBUG] [main]  c.r.c.s.JwtAuthenticationFilter ------ Filter 'jwtAuthenticationFilter' configured for use
+2025-07-13 16:56:25 [INFO] [main]  o.s.d.j.r.query.QueryEnhancerFactory ------ Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-13 16:56:25 [INFO] [main]  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ------ Global AuthenticationManager configured with UserDetailsService bean with name customUserService
+2025-07-13 16:56:25 [WARN] [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ------ spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-13 16:56:25 [INFO] [main]  o.a.coyote.http11.Http11NioProtocol ------ Starting ProtocolHandler ["http-nio-9090"]
+2025-07-13 16:56:25 [INFO] [main]  o.s.b.w.e.tomcat.TomcatWebServer ------ Tomcat started on port 9090 (http) with context path '/'
+2025-07-13 16:56:25 [INFO] [main]  com.restapi.RestapiApplication ------ Started RestapiApplication in 3.497 seconds (process running for 3.863)
+2025-07-13 16:56:25 [INFO] [main]  com.restapi.RestapiApplication ------ Logging info
+2025-07-13 16:56:25 [WARN] [main]  com.restapi.RestapiApplication ------ Logging warn
+2025-07-13 16:56:25 [ERROR] [main]  com.restapi.RestapiApplication ------ Logging error
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/] ------ Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Initializing Servlet 'dispatcherServlet'
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  o.s.web.servlet.DispatcherServlet ------ Completed initialization in 3 ms
+2025-07-13 16:56:37 [TRACE] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyMDQ0OTM0LCJleHAiOjE3NTIwNDUyMzR9.8-OZ3Mp_LHlXqiDjk41K26W8_f9gSF99DOLD71FSqTUHkGQouEuFOYM8OnptYUohs1Q2Saa88piEE4EeRwXiRg
+2025-07-13 16:56:37 [ERROR] [http-nio-9090-exec-2]  c.r.c.s.JwtAuthenticationFilter ------ JWT Token expired : JWT expired 398563470 milliseconds ago at 2025-07-09T07:13:54.000Z. Current time: 2025-07-13T21:56:37.470Z. Allowed clock skew: 0 milliseconds.
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Before method execution: login
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ After method execution: login
+2025-07-13 16:56:37 [INFO] [http-nio-9090-exec-2]  c.r.aspectOriented.LoggingAspect ------ Time Taken: 244ms
+2025-07-13 16:56:53 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Request to the JWT Filter: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYXJpbmFAZ21haWwuY29tIiwiaWF0IjoxNzUyNDQzNzk3LCJleHAiOjE3NTI0NDQwOTd9.oarJuqMfLffwKDdKZ1SljrU-uHFtTrVl6RFH8GjIKkLXvjGLRf8AXyNGvkxXjTyr8-bbHiIZ8aqZOff2QUbwzQ
+2025-07-13 16:56:53 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ User name: karina@gmail.com
+2025-07-13 16:56:53 [TRACE] [http-nio-9090-exec-3]  c.r.c.s.JwtAuthenticationFilter ------ Authentication Security reached here
+2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Before method execution: getAll
+2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ After method execution: getAll
+2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.LoggingAspect ------ Time Taken: 54ms
+2025-07-13 16:56:53 [INFO] [http-nio-9090-exec-3]  c.r.aspectOriented.CustomAspect ------ Custom AOP annotation :getAll
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  o.s.b.w.e.tomcat.GracefulShutdown ------ Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-13 16:59:48 [INFO] [tomcat-shutdown]  o.s.b.w.e.tomcat.GracefulShutdown ------ Graceful shutdown complete
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean ------ Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown initiated...
+2025-07-13 16:59:48 [INFO] [SpringApplicationShutdownHook]  com.zaxxer.hikari.HikariDataSource ------ HikariPool-1 - Shutdown completed.
