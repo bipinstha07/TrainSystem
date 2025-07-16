@@ -1,5 +1,6 @@
 package com.restapi.dto;
 
+import com.restapi.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,11 +17,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class BookingDto {
 
-        private long id;
-        private long userId;
-        private long trainScheduleId;
-        private Long sourceStationId;
-        private long destinationStationId;
+
+        private Long id;
+//        private long userId;
+//        private long trainScheduleId;
+//        private Long sourceStationId;
+//        private long destinationStationId;
+
+    private UserDto userId;
+    private TrainScheduleDto trainScheduleId;
+    private StationDto sourceStationId;
+    private StationDto destinationStationId;
+
         private String pnr;
         private LocalDate journeyDate;
         private BigDecimal totalFare;
