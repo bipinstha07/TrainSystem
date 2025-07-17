@@ -2,6 +2,9 @@ package com.restapi.controller.user;
 
 import com.restapi.dto.PaymentDto;
 import com.restapi.service.PaymentServiceImp;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +17,15 @@ import org.springframework.web.bind.annotation.*;
 public class UserPayment {
     private PaymentServiceImp paymentServiceImp;
 
+    @Operation(
+            summary = "Save Payment",
+            description = "This API save Payment Details"
+    )
+    @ApiResponses( value={
+            @ApiResponse(responseCode = "200",description = "Success"),
+            @ApiResponse(responseCode = "500",description = "Internal Server Error")
+    }
+    )
     @PostMapping()
     public ResponseEntity<PaymentDto> payment(@RequestBody PaymentDto paymentDto){
       PaymentDto savedPaymentDto =  paymentServiceImp.add(paymentDto);
@@ -21,6 +33,16 @@ public class UserPayment {
 
     }
 
+
+    @Operation(
+            summary = "Get Payment Details",
+            description = "This API get Payment Details by Transaction ID"
+    )
+    @ApiResponses( value={
+            @ApiResponse(responseCode = "200",description = "Success"),
+            @ApiResponse(responseCode = "500",description = "Internal Server Error")
+    }
+    )
     @GetMapping("/{tranId}")
     public ResponseEntity<PaymentDto> getByTranx(@PathVariable String tranId){
        PaymentDto paymentDto= paymentServiceImp.getByTransId(tranId);
