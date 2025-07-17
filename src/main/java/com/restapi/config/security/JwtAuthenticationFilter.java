@@ -38,7 +38,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // Get the Authorization header from the request
         String authorizationHeader = request.getHeader("Authorization");
 
-        loggerSecurity.trace("Request to the JWT Filter: {}", authorizationHeader);
+        loggerSecurity.trace("Request to JWT FILTER");
+//        loggerSecurity.trace("Request to the JWT Filter: {}", authorizationHeader);
 
         String username = null;
         String token = null;
@@ -51,7 +52,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 // Extract username from the token
                 username = jwtHelper.getUserNameFromToken(token);
 
-                loggerSecurity.trace("User name: {}",username);
+//                loggerSecurity.trace("User name: {}",username);
+
                 // If username is extracted and no authentication is currently set in SecurityContext
                 if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                     // Load UserDetails from the username

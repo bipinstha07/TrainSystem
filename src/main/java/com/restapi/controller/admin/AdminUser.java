@@ -19,10 +19,10 @@ public class AdminUser {
         this.userService = userService;
     }
 
-    @PostMapping()
-    public ResponseEntity<UserDto> user(@Valid @RequestBody UserDto userDto){
-       return  new ResponseEntity<>(userService.save(userDto), HttpStatus.OK);
-    }
+//    @PostMapping()
+//    public ResponseEntity<UserDto> user(@Valid @RequestBody UserDto userDto){
+//       return  new ResponseEntity<>(userService.save(userDto), HttpStatus.OK);
+//    }
 
     @GetMapping()
     public PageResponse<UserDto> listUser(
