@@ -1,15 +1,20 @@
 package com.restapi.dto;
 
-import com.restapi.entity.PaymentStatus;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class PaymentDto {
     private Long id;
-    private Long booking;
+    private Long bookingId;
     private BigDecimal amount;
-    private PaymentStatus payemtnStatus;
+    private String payemtnStatus;
     private String paymentMethod;
     private String transactionId;
     private LocalDateTime createdAt;

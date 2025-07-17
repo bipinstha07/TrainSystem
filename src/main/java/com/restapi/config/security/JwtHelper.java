@@ -15,7 +15,7 @@ import java.util.Date;
 @Component
 public class JwtHelper {
 
-    public static final int validity = 5 * 60 * 1000;  //  5 minutes in millisecond
+    public static final int validity = 15 * 60 * 1000;  //  5 minutes in millisecond
     private final String secret = "yourSuperSecretKeyForHS512AlgorithmWhichMustBeAtLeast64BytesLongAndSecure"; // Changed to a 64-byte string example
 
 
