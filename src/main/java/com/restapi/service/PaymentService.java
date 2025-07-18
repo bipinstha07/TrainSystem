@@ -10,4 +10,8 @@ public interface PaymentService  {
     PaymentDto add(PaymentDto paymentDto);
 
     PaymentDto getByTransId(String tranId);
+
+    void deleteByTran(String tranId);
+
+
 }

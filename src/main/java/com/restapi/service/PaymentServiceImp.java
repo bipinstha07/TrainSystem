@@ -40,5 +40,14 @@ public class PaymentServiceImp implements PaymentService{
        return modelMapper.map(payment,PaymentDto.class);
     }
 
+    @Transactional
+    @Override
+    public void deleteByTran(String tranId){
+//       Payment payment= paymentRepo.findByTransactionId(tranId);
+//      paymentRepo.delete(payment);
+        paymentRepo.deletePaymentByTransactionId(tranId);
+
+    }
+
 
 }
