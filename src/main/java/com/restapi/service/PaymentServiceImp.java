@@ -43,6 +43,10 @@ public class PaymentServiceImp implements PaymentService{
     @Transactional
     @Override
     public void deleteByTran(String tranId){
+        Payment payment = paymentRepo.findByTransactionId(tranId);
+        if (payment == null) {
+            throw new ResourceNotFoundException("Payment Details not found");
+        }
         paymentRepo.deletePaymentByTransactionId(tranId);
     }
 
