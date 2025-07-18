@@ -33,7 +33,7 @@ public class UserServiceImplied implements UserService{
     @Override
     public UserDto save(UserDto userDto) {
         User user = modelMapper.map(userDto,User.class);
-        Role role = roleRepo.findByName("ROLE_ADMIN").orElseThrow(()-> new ResourceNotFoundException("No Type of role Found"));
+        Role role = roleRepo.findByName("ROLE_USER").orElseThrow(()-> new ResourceNotFoundException("No Type of role Found"));
         user.getRoles().add(role);
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
         user.setLocalDateTime(LocalDateTime.now());

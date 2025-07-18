@@ -60,7 +60,7 @@ public class UserPayment {
             @ApiResponse(responseCode = "500",description = "Internal Server Error")
     }
     )
-//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @DeleteMapping("/{tranId}")
     public ResponseEntity<String> deletePaymentByTran(@PathVariable String tranId){
         paymentServiceImp.deleteByTran(tranId);
