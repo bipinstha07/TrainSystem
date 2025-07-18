@@ -43,10 +43,7 @@ public class PaymentServiceImp implements PaymentService{
     @Transactional
     @Override
     public void deleteByTran(String tranId){
-//       Payment payment= paymentRepo.findByTransactionId(tranId);
-//      paymentRepo.delete(payment);
         paymentRepo.deletePaymentByTransactionId(tranId);
-
     }
 
 
