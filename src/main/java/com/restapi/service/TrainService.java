@@ -1,7 +1,12 @@
 package com.restapi.service;
 
+import com.restapi.dto.AvailableTrainResponse;
 import com.restapi.dto.PageResponse;
 import com.restapi.dto.TrainDto;
+import com.restapi.dto.UserTrainSearch;
+
+import java.time.LocalDate;
+import java.util.List;
 
 public interface TrainService {
 
@@ -15,4 +20,6 @@ public interface TrainService {
     void delete(Long trainId);
 
     TrainDto update(Long trainId, TrainDto trainDto);
+
+    List<AvailableTrainResponse> userSearchTrain(UserTrainSearch userTrainSearch);
 }
