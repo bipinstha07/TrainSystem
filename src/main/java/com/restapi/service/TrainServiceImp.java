@@ -86,37 +86,73 @@ public class TrainServiceImp implements TrainService{
 
     @Override
     public List<AvailableTrainResponse> userSearchTrain(UserTrainSearch userTrainSearch) {
-            List<TrainRoute> trains = trainRepo.findTrainBySourceAndDestinationInOrder(userTrainSearch.getSourceStationId(),userTrainSearch.getDestinationId());
+            List<Train> matchedTrains = trainRepo.findTrainBySourceAndDestination(userTrainSearch.getSourceStationId(),userTrainSearch.getDestinationId());
 
-         List<AvailableTrainResponse> getLists =   trains.stream().map((trainRoute -> {
-               TrainSchedule trainSchedules = trainScheduleRepo.findByTrainIdAndRunDate(trainRoute.getTrain().getId(), userTrainSearch.getJourneyDate()).orElse(null);
+            if(matchedTrains==null){
+                return null;
+            }
 
-               if(trainSchedules == null){
-                   return null;
-               }
+            List<Train> validTrain = new ArrayList<>();
 
-                Map<CoachType,Integer> seatMap= new HashMap<>();
-               Map<CoachType,Double> priceMap = new HashMap<>();
+            for (Train train: matchedTrains){
+                Integer sourceStationOrder= null;
+                Integer destinationStationOrder= null;
+
+                for(TrainRoute trainRoute: train.getRoutes()){
+                    if(trainRoute.getStation().getId()==userTrainSearch.getSourceStationId()){
+                        sourceStationOrder=trainRoute.getStationOrder();
+                    } else if (trainRoute.getStation().getId()==userTrainSearch.getDestinationId()) {
+                        destinationStationOrder=trainRoute.getStationOrder();
+                    }
 
 
-               for(TrainSeat trainSeat:trainSchedules.getTrainSeats()){
-                   seatMap.merge(trainSeat.getCoachType(),trainSeat.getAvailableSeats(),Integer::sum);
-                   priceMap.putIfAbsent(trainSeat.getCoachType(),trainSeat.getPrice());
-               }
+                }
 
-               return AvailableTrainResponse.builder()
-                       .trainId(trainRoute.getId())
-                       .trainName(trainRoute.getTrain().getName())
-                       .trainNumber(trainRoute.getTrain().getNumber())
-                       .departureTime(trainRoute.getDepartureTime())
-                       .arrivalTime(trainRoute.getArrivalTime())
-                       .seatsAvailable(seatMap)
-                       .priceByCoach(priceMap)
-                       .build();
-            })).filter(Objects::nonNull).toList();
+                boolean runOnThatDay = train.getSchedules().stream().anyMatch(sch-> sch.getRunDate().isEqual(userTrainSearch.getJourneyDate()));
+                if(sourceStationOrder != null && destinationStationOrder != null && sourceStationOrder<destinationStationOrder && runOnThatDay){
+                    validTrain.add(train);
+                }
+            }
 
-         return getLists;
+            List<AvailableTrainResponse> responses = new ArrayList<>();
+            for(Train train:validTrain){
+                TrainSchedule trainSchedule = train.getSchedules().stream().filter(
+                        sc->sc.getRunDate().equals(userTrainSearch.getJourneyDate())).findFirst()
+                        .orElse(null);
+
+                if(trainSchedule==null){
+                    continue;
+                }
+                TrainRoute trainRoute = train.getRoutes().stream().filter(
+                        route-> route.getStation().getId()==userTrainSearch.getSourceStationId()).findFirst()
+                        .orElse(null);
+
+                if(trainRoute==null){
+                    continue;
+                }
+
+                Map<CoachType,Integer> seatMap = new HashMap<>();
+                Map<CoachType,Double> priceMap = new HashMap<>();
+
+                for(TrainSeat trainSeat: trainSchedule.getTrainSeats()){
+                    seatMap.merge(trainSeat.getCoachType(),trainSeat.getAvailableSeats(),Integer::sum);
+                    priceMap.putIfAbsent(trainSeat.getCoachType(),trainSeat.getPrice());
+                }
+
+                AvailableTrainResponse availableTrainResponse = AvailableTrainResponse.builder()
+                        .trainNumber(train.getNumber())
+                        .trainId(train.getId())
+                        .departureTime(trainRoute.getDepartureTime())
+                        .arrivalTime(trainRoute.getArrivalTime())
+                        .seatsAvailable(seatMap)
+                        .priceByCoach(priceMap)
+                        .scheduleDate(trainSchedule.getRunDate())
+                        .build();
+
+                responses.add(availableTrainResponse);
+            }
+        return responses;
+
     }
-
 
 }
