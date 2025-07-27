@@ -2,6 +2,7 @@ package com.restapi.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime;
 public class TrainScheduleDto {
 
     private Long id;
-    private LocalDateTime runDate;
+    private LocalDate runDate;
     private Long trainId;
     private Integer availableSeats;
 

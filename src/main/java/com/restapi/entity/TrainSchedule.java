@@ -20,7 +20,7 @@ public class TrainSchedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime runDate;
+    private LocalDate runDate;
 
     @ManyToOne
     private Train train;

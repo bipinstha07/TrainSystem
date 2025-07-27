@@ -86,10 +86,10 @@ public class TrainServiceImp implements TrainService{
 
     @Override
     public List<AvailableTrainResponse> userSearchTrain(UserTrainSearch userTrainSearch) {
-            List<Train> trains = trainRepo.findTrainBySourceAndDestinationInOrder(userTrainSearch.getSourceStationId(),userTrainSearch.getDestinationId());
+            List<TrainRoute> trains = trainRepo.findTrainBySourceAndDestinationInOrder(userTrainSearch.getSourceStationId(),userTrainSearch.getDestinationId());
 
-         List<AvailableTrainResponse> getLists =   trains.stream().map((train -> {
-               TrainSchedule trainSchedules = trainScheduleRepo.findByTrainIdAndRunDate(train.getId(), userTrainSearch.getJourneyDate()).orElse(null);
+         List<AvailableTrainResponse> getLists =   trains.stream().map((trainRoute -> {
+               TrainSchedule trainSchedules = trainScheduleRepo.findByTrainIdAndRunDate(trainRoute.getTrain().getId(), userTrainSearch.getJourneyDate()).orElse(null);
 
                if(trainSchedules == null){
                    return null;
@@ -105,11 +105,11 @@ public class TrainServiceImp implements TrainService{
                }
 
                return AvailableTrainResponse.builder()
-                       .trainId(train.getId())
-                       .trainName(train.getName())
-                       .trainNumber(train.getNumber())
-                       .departureTime(trainSchedules.getRunDate())
-                       .arrivalTime(trainSchedules.getRunDate())
+                       .trainId(trainRoute.getId())
+                       .trainName(trainRoute.getTrain().getName())
+                       .trainNumber(trainRoute.getTrain().getNumber())
+                       .departureTime(trainRoute.getDepartureTime())
+                       .arrivalTime(trainRoute.getArrivalTime())
                        .seatsAvailable(seatMap)
                        .priceByCoach(priceMap)
                        .build();
