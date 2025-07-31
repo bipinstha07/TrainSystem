@@ -87,7 +87,6 @@ public class TrainServiceImp implements TrainService{
     @Override
     public List<AvailableTrainResponse> userSearchTrain(UserTrainSearch userTrainSearch) {
             List<Train> matchedTrains = trainRepo.findTrainBySourceAndDestination(userTrainSearch.getSourceStationId(),userTrainSearch.getDestinationId());
-
             if(matchedTrains==null){
                 return null;
             }
@@ -99,9 +98,9 @@ public class TrainServiceImp implements TrainService{
                 Integer destinationStationOrder= null;
 
                 for(TrainRoute trainRoute: train.getRoutes()){
-                    if(trainRoute.getStation().getId()==userTrainSearch.getSourceStationId()){
+                    if(Objects.equals(trainRoute.getStation().getId(), userTrainSearch.getSourceStationId())){
                         sourceStationOrder=trainRoute.getStationOrder();
-                    } else if (trainRoute.getStation().getId()==userTrainSearch.getDestinationId()) {
+                    } else if (Objects.equals(trainRoute.getStation().getId(), userTrainSearch.getDestinationId())) {
                         destinationStationOrder=trainRoute.getStationOrder();
                     }
 
@@ -133,7 +132,6 @@ public class TrainServiceImp implements TrainService{
 
                 Map<CoachType,Integer> seatMap = new HashMap<>();
                 Map<CoachType,Double> priceMap = new HashMap<>();
-
                 for(TrainSeat trainSeat: trainSchedule.getTrainSeats()){
                     seatMap.merge(trainSeat.getCoachType(),trainSeat.getAvailableSeats(),Integer::sum);
                     priceMap.putIfAbsent(trainSeat.getCoachType(),trainSeat.getPrice());
@@ -142,10 +140,12 @@ public class TrainServiceImp implements TrainService{
                 AvailableTrainResponse availableTrainResponse = AvailableTrainResponse.builder()
                         .trainNumber(train.getNumber())
                         .trainId(train.getId())
+                        .trainName(train.getName())
                         .departureTime(trainRoute.getDepartureTime())
                         .arrivalTime(trainRoute.getArrivalTime())
                         .seatsAvailable(seatMap)
                         .priceByCoach(priceMap)
+                        .trainScheduleId(trainSchedule.getId())
                         .scheduleDate(trainSchedule.getRunDate())
                         .build();
 

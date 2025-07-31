@@ -24,7 +24,7 @@ public class AdminTrain {
             summary = "Create Train",
             description = "This Api create Train"
     )
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<TrainDto> add(@RequestBody TrainDto trainDto){
         System.out.println(trainDto.getName());
         System.out.println(trainDto.getSourceStation());
@@ -38,7 +38,7 @@ public class AdminTrain {
 
 //    Custom AOP annotation
 //    @CustomAopAnnotation
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<PageResponse<TrainDto>> getAll(
             @RequestParam (value = "page" , defaultValue = "0") int page,
             @RequestParam (value = "size", defaultValue = "10") int size,

@@ -1,6 +1,8 @@
 package com.restapi.controller.user;
 
 import com.restapi.dto.BookingDto;
+import com.restapi.dto.BookingRequestDto;
+import com.restapi.dto.BookingResponseDto;
 import com.restapi.service.BookingServiceImp;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -10,15 +12,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Book;
-
 
 @RestController
 @RequestMapping("/user/booking")
 @AllArgsConstructor
-public class AdminBooking {
+public class UserBooking {
     private BookingServiceImp bookingServiceImp;
-
 
     @Operation(
             summary = "Save Booking",
@@ -29,9 +28,9 @@ public class AdminBooking {
             @ApiResponse(responseCode = "500",description = "Internal Server Error")
     }
     )
-    @PostMapping()
-    public ResponseEntity<BookingDto> save(@RequestBody BookingDto bookingDto){
-      return new ResponseEntity<>(bookingServiceImp.save(bookingDto), HttpStatus.CREATED);
+    @PostMapping
+    public ResponseEntity<BookingResponseDto> save(@RequestBody BookingRequestDto bookingRequestDto){
+      return new ResponseEntity<>(bookingServiceImp.save(bookingRequestDto), HttpStatus.CREATED);
 
     }
 

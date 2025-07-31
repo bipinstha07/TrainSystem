@@ -1,5 +1,6 @@
 package com.restapi.dto;
 
+import com.restapi.entity.BookingStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,7 +31,7 @@ public class BookingDto {
     private String pnr;
         private LocalDate journeyDate;
         private BigDecimal totalFare;
-        private String bookingStatus;
+        private BookingStatus bookingStatus;
         private LocalDateTime createdAt;
 
 

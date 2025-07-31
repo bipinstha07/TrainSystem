@@ -18,10 +18,12 @@ public class BookingPassenger {
     @ManyToOne
     private Booking booking;
 
+    @ManyToOne
+    private TrainSeat trainSeat;
+    private String seatNumber;
+
     private String name;
     private Integer age;
     private String gender;
-    private String seatNo;
-
 
 }

@@ -37,8 +37,8 @@ public class TrainSeat {
         return availableSeats<=0;
     }
 
-    public boolean isSeatAvailalbe(int seatToBook){
-        return  (availableSeats-seatToBook)>=0;
+    public boolean isSeatAvailable(int seatToBook){
+        return  seatToBook <= availableSeats;
     }
 
 

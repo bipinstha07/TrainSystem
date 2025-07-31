@@ -42,10 +42,10 @@ public class Booking {
     private BookingStatus bookingStatus;
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "booking")
+    @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL)
     private List<BookingPassenger> passengers;
 
     @OneToOne(mappedBy = "booking", cascade = CascadeType.ALL)
-    private Payment payement;
+    private Payment payment;
 
 }

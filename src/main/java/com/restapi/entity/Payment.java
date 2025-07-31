@@ -24,7 +24,7 @@ public class Payment {
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
-     private PaymentStatus payemtnStatus;
+     private PaymentStatus paymentStatus;
      private String paymentMethod;
      private String transactionId;
      private LocalDateTime  createdAt;

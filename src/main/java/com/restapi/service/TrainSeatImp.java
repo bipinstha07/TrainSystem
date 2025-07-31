@@ -70,7 +70,7 @@ public class TrainSeatImp implements TrainSeatService{
     @Transactional
     public List<Integer> bookSeat(int seatToBook,Long seatId) throws IllegalAccessException {
         TrainSeat trainSeat= trainSeatRepo.findById(seatId).orElseThrow(()-> new ResourceNotFoundException("No Train Container Found"));
-        if(trainSeat.isSeatAvailalbe(seatToBook)){
+        if(trainSeat.isSeatAvailable(seatToBook)){
             trainSeat.setAvailableSeats(trainSeat.getAvailableSeats()-seatToBook);
             List<Integer> bookedSeats = new ArrayList<>();
             for(int i=1; i<=seatToBook;i++){
@@ -81,7 +81,7 @@ public class TrainSeatImp implements TrainSeatService{
             return bookedSeats;
         }
         else {
-            throw new IllegalAccessException("No seats avaiable");
+            throw new IllegalAccessException("No seats available");
         }
     }
 

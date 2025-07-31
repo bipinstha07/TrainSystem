@@ -1,9 +1,11 @@
 package com.restapi.service;
 
 import com.restapi.dto.BookingDto;
+import com.restapi.dto.BookingRequestDto;
+import com.restapi.dto.BookingResponseDto;
 
 public interface BookingService {
-    BookingDto save(BookingDto bookingDto);
+    BookingResponseDto save(BookingRequestDto bookingRequestDto);
 
     BookingDto findByPnr(String pnr);
 
