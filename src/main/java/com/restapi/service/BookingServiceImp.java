@@ -30,7 +30,8 @@ public class BookingServiceImp implements BookingService{
     private TrainScheduleRepo trainScheduleRepo;
 
     @Override
-    public  BookingResponseDto save(BookingRequestDto bookingRequestDto){
+    @Transactional
+    public synchronized   BookingResponseDto save(BookingRequestDto bookingRequestDto){
        User user = userRepo.findById(bookingRequestDto.getUserId()).orElseThrow(()-> new ResourceNotFoundException("No User Found"));
        TrainSchedule trainSchedule= this.trainScheduleRepo.findById(bookingRequestDto.getTrainScheduleId()).orElseThrow(()->new ResourceNotFoundException("No Train Schedule Found"));
         Station sourceStation = stationRepo.findById(bookingRequestDto.getSourceStationId()).orElseThrow(()->new ResourceNotFoundException("No Source Station Found"));
