@@ -52,11 +52,11 @@ public class JwtHelper {
 
 
     public boolean isRefreshToken(String token){
-        return token.equals("refreshToken");
+        return getTokenType(token).equals("refreshToken");
     }
 
     public boolean isAccessToken(String token){
-        return token.equals("accessToken");
+        return getTokenType(token).equals("accessToken");
     }
 
     private String getTokenType(String token){
