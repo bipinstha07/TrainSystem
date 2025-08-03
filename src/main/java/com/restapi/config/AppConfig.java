@@ -26,7 +26,7 @@ public class AppConfig {
                        .allowedOriginPatterns("http://localhost:5173")
                        .allowedMethods("PUT","DELETE","GET","POST")
                        .allowedHeaders("*")
-                       .allowCredentials(true);
+                       .allowCredentials(true); // allowed cookies if needed
             }
         };
     }
