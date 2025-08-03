@@ -19,41 +19,41 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthenticationFilter;
     private JWTAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//        httpSecurity.csrf(e->e.disable())
-//                .authorizeHttpRequests(request->
-//                        request.requestMatchers("/auth/login","/auth/user/create","/swagger-ui/**",
-//                                        "/v3/api-docs/**",
-//                                        "/api/v1/user/**",
-//                                        "/*",
-//                                        "/swagger-resources/**",
-//                                        "/webjars/**")
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.csrf(e->e.disable())
+                .authorizeHttpRequests(request->
+                        request.requestMatchers("/auth/login","/auth/**","/swagger-ui/**",
+                                        "/v3/api-docs/**",
+                                        "/api/v1/user/**",
+                                        "/*",
+                                        "/swagger-resources/**",
+                                        "/webjars/**")
+                                .permitAll()
+                                .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
+                                .requestMatchers("/user/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                                .anyRequest()
 //                                .permitAll()
-//                                .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
-//                                .requestMatchers("/user/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-//                                .anyRequest()
-////                                .permitAll()
-//                                .authenticated()
-//                );
-//
-//        httpSecurity.sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-//        httpSecurity.exceptionHandling(e->e.authenticationEntryPoint(jwtAuthenticationEntryPoint));
-//        httpSecurity.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
-//
-//        return httpSecurity.build();
-//
-//    }
+                                .authenticated()
+                );
 
-@Bean
-public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-    httpSecurity
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                    .anyRequest().permitAll()
-            );
-    return httpSecurity.build();
-}
+        httpSecurity.sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        httpSecurity.exceptionHandling(e->e.authenticationEntryPoint(jwtAuthenticationEntryPoint));
+        httpSecurity.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return httpSecurity.build();
+
+    }
+
+//@Bean
+//public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+//    httpSecurity
+//            .csrf(csrf -> csrf.disable())
+//            .authorizeHttpRequests(auth -> auth
+//                    .anyRequest().permitAll()
+//            );
+//    return httpSecurity.build();
+//}
 
 
     @Bean

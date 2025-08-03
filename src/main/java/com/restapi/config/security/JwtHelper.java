@@ -11,11 +11,15 @@ import org.springframework.stereotype.Component;
 import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 @Component
 public class JwtHelper {
 
-    public static final int validity = 15 * 60 * 1000;  //  5 minutes in millisecond
+    public static final long accessValidity = 15 * 60 * 1000;  //  15 minutes in millisecond
+    private static final long refreshValidity = 600 * 60 * 1000;
     private final String secret = "yourSuperSecretKeyForHS512AlgorithmWhichMustBeAtLeast64BytesLongAndSecure"; // Changed to a 64-byte string example
 
 
@@ -33,15 +37,44 @@ public class JwtHelper {
 //                .signWith(key, SignatureAlgorithm.HS512)
 //                .compact();
 //    }
-@SuppressWarnings("deprecation")
-    public String generateToken(UserDetails userDetails) {
+
+    public String generateAccessToken(UserDetails userDetails) {
+        Map<String,Object> claims = new HashMap<>();
+        claims.put("token_type","accessToken");
+        return buildToken(claims,userDetails.getUsername(),accessValidity);
+    }
+
+    public String generateRefreshToken(UserDetails userDetails){
+        Map<String,Object> claims = new HashMap<>();
+        claims.put("token_type","refreshToken");
+        return buildToken(claims,userDetails.getUsername(),refreshValidity);
+    }
+
+
+    public boolean isRefreshToken(String token){
+        return token.equals("refreshToken");
+    }
+
+    public boolean isAccessToken(String token){
+        return token.equals("accessToken");
+    }
+
+    private String getTokenType(String token){
+       Object tokenType =   getClaims(token).get("token_type");
+       return tokenType != null ? tokenType.toString() : "";
+    }
+
+
+    private String buildToken(Map<String,Object> claims, String subject, long validity){
         return Jwts.builder()
-                .subject(userDetails.getUsername())
+                .claims(claims)
+                .subject(subject)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + validity))
-                .signWith(key,SignatureAlgorithm.HS512) // key already knows algorithm
+                .signWith(key) // key already knows algorithm
                 .compact();
     }
+
 
     public String getUserNameFromToken(String token){
         return getClaims(token).getSubject();
