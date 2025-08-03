@@ -2,6 +2,7 @@ package com.restapi.exceptionhandler;
 
 
 import com.restapi.dto.ErrorResponse;
+import io.jsonwebtoken.security.SignatureException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -46,6 +47,20 @@ public class GlobalExceptionHandler {
         return  new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
     }
 
+
+    @ExceptionHandler(SignatureException.class)
+    public ResponseEntity<ErrorResponse> handleSignatureException(SignatureException exception){
+        ErrorResponse errorResponse= new ErrorResponse(exception.getMessage(),400,false);
+        return  new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+    }
+
+
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleException(Exception exception){
+        ErrorResponse errorResponse= new ErrorResponse(exception.getMessage(),400,false);
+        return  new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+    }
 
 
 
