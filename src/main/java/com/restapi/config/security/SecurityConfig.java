@@ -42,7 +42,8 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf(Customizer.withDefaults())
+//        httpSecurity.csrf(Customizer.withDefaults())
+        httpSecurity.csrf(cs->cs.disable())
 //                .cors(Customizer.withDefaults())
                 .cors(c->c.configurationSource(configurationSource()))
                 .authorizeHttpRequests(request->
@@ -52,9 +53,11 @@ public class SecurityConfig {
                                         "/*",
                                         "/swagger-resources/**",
                                         "/webjars/**")
+
+
                                 .permitAll()
                                 .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN")
-                                .requestMatchers("/user/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
+                               .requestMatchers("/user/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
                                 .anyRequest()
 //                                .permitAll()
                                 .authenticated()
@@ -68,15 +71,7 @@ public class SecurityConfig {
 
     }
 
-//@Bean
-//public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//    httpSecurity
-//            .csrf(csrf -> csrf.disable())
-//            .authorizeHttpRequests(auth -> auth
-//                    .anyRequest().permitAll()
-//            );
-//    return httpSecurity.build();
-//}
+
 
 
     @Bean
