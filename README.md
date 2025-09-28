@@ -101,6 +101,15 @@ cd TrainSystem
 ./mvnw clean install
 ./mvnw spring-boot:run
 ```
+
+🐳 Docker & ☸️ Kubernetes
+```
+Docker setup files are available in the docker/
+folder.
+
+Kubernetes manifests are available in the k8s/
+folder.
+```
 ---
 ## 📝 Summary
 A full-stack backend for railway reservation systems leveraging JWT security, AOP, Lombok, and OpenAPI, with layered architecture that supports easy integration with frontends, payment gateways, and notification services.
